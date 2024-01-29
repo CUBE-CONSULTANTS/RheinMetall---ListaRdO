@@ -1,0 +1,153 @@
+{
+  "dati": [
+    {
+      "richiesta": "6000016026",
+      "testo_esteso": "sap-icon://document",
+      "posizioni": [
+        {
+          "posizione": "10",
+          "Materiale": "RZB00323A",
+          "testo_breve": "BLOCCO GREZZO ALLUMINIO 25X210X210 MM",
+          "data": "12.02.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "sap-icon://download",
+          "leadtime": "10/02/2024",
+          "prezzo": "100"
+        },
+        {
+          "posizione": "20",
+          "Materiale": "RZB00304A",
+          "testo_breve": "BLOCCO GREZZO ALLUMINIO 50X500X575 MM",
+          "data": "14.02.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "",
+          "leadtime": "10/02/2024",
+          "prezzo": "100"
+        },
+
+        {
+          "posizione": "30",
+          "Materiale": "RZB00307A",
+          "testo_breve": "BARRA GREZZA  ALLUMINIO, ø 200X20MM",
+          "data": "12.02.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "",
+          "leadtime": "10/02/2024",
+          "prezzo": "100"
+        },
+
+        {
+          "posizione": "40",
+          "Materiale": "RZB00308A",
+          "testo_breve": "BARRA GREZZA  ALLUMINIO, ø 140X35 MM",
+          "data": "12.02.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "sap-icon://download",
+          "leadtime": "10/02/2024",
+          "prezzo": "100"
+        },
+
+        {
+          "posizione": "50",
+          "Materiale": "RZB00309A",
+          "testo_breve": "BARRA GREZZA  ALLUMINIO, ø 200X40MM",
+          "data": "12.02.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "sap-icon://download",
+          "leadtime": "10/02/2024",
+          "prezzo": "100"
+        },
+
+        {
+          "posizione": "60",
+          "Materiale": "RZB00310A",
+          "testo_breve": "BARRA GREZZA  ALLUMINIO, ø 100x85 MM",
+          "data": "12.02.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "",
+          "leadtime": "10/02/2024",
+          "prezzo": "100"
+        },
+
+        {
+          "posizione": "70",
+          "Materiale": "RZB00314A",
+          "testo_breve": "BARRA GREZZA ALLUMINIO ø 250x90 mm",
+          "data": "12.02.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "",
+          "leadtime": "10/02/2024",
+          "prezzo": "100"
+        }
+      ],
+      "bom": "sap-icon://download",
+      "allegato": "sap-icon://search",
+      "stato": "sap-icon://status-positive",
+      "color":"green"
+    },
+    {
+      "richiesta": "6000016025",
+      "testo_esteso": "sap-icon://document",
+      "posizioni": [
+        {
+          "posizione": "10",
+          "Materiale": "RZB00311A",
+          "testo_breve": "BLOCCO GREZZO ALLUMINIO 145X155X250 MM",
+          "data": "11.06.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "",
+          "leadtime": "01/06/2024",
+          "prezzo": "100"
+        },
+
+        {
+          "posizione": "20",
+          "Materiale": "RZB00312A",
+          "testo_breve": "BARRA GREZZA ALLUMINIO ø 200X125MM",
+          "data": "11.06.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "sap-icon://download",
+          "leadtime": "01/06/2024",
+          "prezzo": "100"
+        },
+
+        {
+          "posizione": "30",
+          "Materiale": "RZB00323A",
+          "testo_breve": "BLOCCO GREZZO ALLUMINIO 95X100X235 MM",
+          "data": "11.06.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "",
+          "leadtime": "01/06/2024",
+          "prezzo": "100"
+        },
+
+        {
+          "posizione": "40",
+          "Materiale": "RZB00315A",
+          "testo_breve": "BARRA GREZZA ALLUMINIO ø180X35 MM",
+          "data": "11.06.2024",
+          "udm": "PZ",
+          "quantita": "20",
+          "bom": "sap-icon://download",
+          "leadtime": "01/06/2024",
+          "prezzo": "100"
+        }
+      ],
+      "bom": "sap-icon://download",
+      "allegato": "sap-icon://search",
+      "stato": "sap-icon://status-negative",
+      "color":"red"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+<core:FragmentDefinition
+  xmlns="sap.ui.table"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:m="sap.m"
+  xmlns:u="sap.ui.unified"
+  xmlns:core="sap.ui.core"
+>
+  <TreeTable
+    id="TreeTableBasic"
+    rows="{path: 'richiesteModel>/dati', parameters: {arrayNames: ['posizioni']}}"
+    selectionMode="None"
+    class="table" 
+    >
+    <extension>
+     <m:OverflowToolbar >
+        <m:MultiComboBox
+      id="MultiBox1"
+      width="300px"
+      items="{
+        path: 'Sorter>/'
+      }"
+      placeholder="Ordinare i dati per"
+    >
+      <core:Item
+        key="{Sorter>}"
+        text="{
+          parts: [{
+            path: 'Sorter>'
+          }],
+          formatter: '.formatText'
+        }"
+      />
+    </m:MultiComboBox>
+    <m:Button
+    icon="sap-icon://sort-descending"
+    press="handleSortButtonPressed"
+  />
+  <m:Button
+    icon="sap-icon://sort-ascending"
+    press="handleSortButtonPressed"
+  />
+  <m:Button
+    tooltip="Filter"
+    icon="sap-icon://filter"
+    press="openFragment"
+  />
+  <m:Button
+    icon="sap-icon://refresh"
+    press="refreshFilters"
+  />
+  
+</m:OverflowToolbar>
+    </extension>
+    
+    <columns>
+      <Column>
+        <m:Label text="{i18n>Richiesta}" />
+        <template>
+          <m:Text text="{richiesteModel>richiesta}" wrapping="false" />      
+        </template>
+      </Column>
+      <Column width="6rem" hAlign="Center" >
+        <m:Label text="{i18n>TestoEsteso}" />
+        <template>
+          <core:Icon height="2.5rem" color="blue" size="1.5rem" src="{richiesteModel>testo_esteso}"></core:Icon>
+        </template>
+      </Column>
+      <Column width="4rem" hAlign="Center">
+        <m:Label text="{i18n>Pos}" />
+        <template>
+          <m:Text text="{richiesteModel>posizione}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="6rem">
+        <m:Label text="{i18n>Materiale}" />
+        <template>
+          <m:Text text="{richiesteModel>Materiale}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column>
+        <m:Label text="{i18n>TestoBreve}" />
+        <template>
+          <m:Text text="{richiesteModel>testo_breve}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="6rem">
+        <m:Label text="{i18n>Consegna}" />
+        <template>
+          <m:Text text="{richiesteModel>data}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="5rem" hAlign="Center">
+        <m:Label text="{i18n>Quantita}" />
+        <template>
+          <m:Text text="{richiesteModel>quantita}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="4rem" hAlign="Center">
+        <m:Label text="{i18n>UdM}" />
+        <template>
+          <m:Text text="{richiesteModel>udm}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="5rem" hAlign="Center">
+        <m:Label text="{i18n>DocBOM}" />
+        <template>
+          <core:Icon color="blue" size="1.5rem" src="{richiesteModel>bom}" />   
+        </template>
+      </Column>
+      <Column width="6rem">
+        <m:Label text="{i18n>Leadtime}" />
+        <template>
+          <m:Text text="{richiesteModel>leadtime}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="4rem" hAlign="Center">
+        <m:Label text="{i18n>Prezzo}" />
+        <template>
+          <m:Text text="{richiesteModel>prezzo}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="9rem" hAlign="Center">
+        <m:Label text="{i18n>allegato}"  />
+        <template>
+          <core:Icon color="blue" size="1.5rem" src="{richiesteModel>allegato}" />   
+        </template>
+      </Column>
+      <Column width="4rem" hAlign="Center">
+        <m:Label text="{i18n>Stato}" />
+        <template>
+          <core:Icon color="{richiesteModel>color}" size="1.5rem" src="{richiesteModel>stato}" />   
+        </template>
+      </Column>   
+    </columns>
+
+  </TreeTable>
+</core:FragmentDefinition>

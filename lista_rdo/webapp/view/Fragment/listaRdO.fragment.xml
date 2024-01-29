@@ -1,0 +1,181 @@
+<c:FragmentDefinition
+xmlns="sap.m"
+xmlns:c="sap.ui.core"
+xmlns:mvc="sap.ui.core.mvc"
+>
+
+<Table
+sticky="HeaderToolbar,ColumnHeaders"
+id="Tabl"
+items="{modello>/}"
+mode="SingleSelectLeft"
+growing="true"
+autoPopinMode="true"
+class="table"
+>
+<headerToolbar>
+  <OverflowToolbar design="Info">
+    <MultiComboBox
+      id="MultiBox1"
+      width="300px"
+      items="{
+        path: 'Sorter>/'
+      }"
+      placeholder="Ordinare i dati per"
+    >
+      <c:Item
+        key="{Sorter>}"
+        text="{
+          parts: [{
+            path: 'Sorter>'
+          }],
+          formatter: '.formatText'
+        }"
+      />
+    </MultiComboBox>
+    <Button
+      icon="sap-icon://sort-descending"
+      press="handleSortButtonPressed"
+    />
+    <Button
+      icon="sap-icon://sort-ascending"
+      press="handleSortButtonPressed"
+    />
+    <Button
+      tooltip="Filter"
+      icon="sap-icon://filter"
+      press="openFragment"
+    />
+    <Button
+      icon="sap-icon://refresh"
+      press="refreshFilters"
+    />
+    <ToolbarSpacer />
+
+  </OverflowToolbar>
+</headerToolbar>
+<columns>
+  <Column width="90px">
+    <Text text="{i18n>Richiesta}" />
+  </Column>
+  <Column
+  hAlign="Center"
+  width="100px"
+>
+  <Text text="{i18n>TestoEsteso}" />
+</Column>
+  <Column width="90px">
+    <Text text="{i18n>Pos}" />
+  </Column>
+  <Column width="60px">
+    <Text text="{i18n>Materiale}" />
+  </Column>
+  <Column width="130px">
+    <Text text="{i18n>TestoBreve}" />
+  </Column>
+  <Column
+    width="90px"
+    hAlign="Center"
+  >
+    <Text text="{i18n>Consegna}" />
+  </Column>
+  <Column
+    width="90px"
+    hAlign="Center"
+  >
+    <Text text="{i18n>Quantita}" />
+  </Column>
+  <Column
+    width="100px"
+    hAlign="Center"
+  >
+    <Text text="{i18n>UdM}" />
+  </Column>
+  <Column
+    hAlign="Center"
+    width="100px"
+  >
+    <Text text="{i18n>DocBOM}" />
+  </Column>
+  <Column
+    hAlign="Center"
+    width="100px"
+  >
+    <Text text="{i18n>Leadtime}" />
+  </Column>
+  <Column
+    hAlign="Center"
+    width="100px"
+  >
+    <Text text="{i18n>Prezzo}" />
+  </Column>
+  <Column
+    hAlign="Center"
+    width="100px"
+  >
+    <Text text="{i18n>allegato}" />
+  </Column>
+  <Column
+    hAlign="Center"
+    width="100px"
+  >
+    <Text text="{i18n>Stato}" />
+  </Column>
+  
+</columns>
+<items>
+  <ColumnListItem
+
+  >
+    <cells>
+      <Text text="{modello>Richiesta}" />
+    </cells>
+    <cells>
+      <Text text="{modello>tEsteso}" />
+    </cells>
+    <cells>
+      <Text text="{modello>Pos}" />
+    </cells>
+    <cells>
+      <Text text="{modello>Materiale}" />
+    </cells>
+    <cells>
+      <Text text="{modello>tBreve}" />
+    </cells>
+    <cells>
+        <Text text="{
+          path: 'modello>Consegna',
+          type: 'sap.ui.model.type.DateTime',
+          formatOptions: {
+            source: {
+              pattern: 'yyyyMMdd-HHmmss'
+            },
+            pattern: 'dd/MM/yyyy - HH:mm:ss'
+          }
+        }" />
+    </cells>
+    <cells>
+      <Text text="{modello>Quantita}" />
+    </cells>
+    <cells>
+      <Text text="{modello>Udm}" />
+    </cells>
+    <cells>
+      <Text text="{modello>Bom}" />
+    </cells>
+    <cells>
+      <Text text="{modello>LeadTime}" />
+    </cells>
+    <cells>
+      <Text text="{modello>Prezzo}" />
+    </cells>
+    <cells>
+      <Text text="{modello>Allegato}" />
+    </cells>
+    <cells>
+      <Text text="{modello>Stato}" />
+    </cells>
+  </ColumnListItem>
+</items>
+</Table>
+</c:FragmentDefinition>
