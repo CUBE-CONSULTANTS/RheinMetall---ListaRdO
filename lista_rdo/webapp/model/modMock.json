@@ -87,10 +87,10 @@
           "prezzo": "100"
         }
       ],
-      "bom": "sap-icon://download",
+
       "allegato": "sap-icon://search",
       "stato": "sap-icon://status-positive",
-      "color":"green"
+      "color": "green"
     },
     {
       "richiesta": "6000016025",
@@ -144,10 +144,10 @@
           "prezzo": "100"
         }
       ],
-      "bom": "sap-icon://download",
+
       "allegato": "sap-icon://search",
       "stato": "sap-icon://status-negative",
-      "color":"red"
+      "color": "red"
     }
   ]
 }
