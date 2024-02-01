@@ -9,7 +9,7 @@
     id="TreeTableBasic"
     rows="{path: 'richiesteModel>/dati', parameters: {arrayNames: ['posizioni']}}"
     selectionMode="None"
-    class="table" 
+    class="table sapUiMediumMarginBottom" 
     >
     <extension>
      <m:OverflowToolbar >
@@ -50,8 +50,7 @@
   />
   
 </m:OverflowToolbar>
-    </extension>
-    
+    </extension>  
     <columns>
       <Column width="10rem">
         <m:Label text="{i18n>Richiesta}" />
