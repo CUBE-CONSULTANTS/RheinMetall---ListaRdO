@@ -12,6 +12,7 @@ sap.ui.define(
 
     return BaseController.extend("listardo.listardo.controller.Home", {
       onInit: async function () {
+        this.userType = this.getOwnerComponent().getModel("userModel").getProperty("/tipoUtente");
         debugger;
         let objJSon = await fetch("/model/modMock.json");
         let data = await objJSon.json();

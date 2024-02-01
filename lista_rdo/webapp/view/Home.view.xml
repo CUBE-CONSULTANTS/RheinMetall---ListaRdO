@@ -6,7 +6,8 @@ xmlns="sap.m"
 xmlns:layout="sap.ui.layout">
 <Page
 class="sapUiResponsivePadding--header sapUiResponsivePadding--footer sapUiResponsivePadding--content"
-floatingFooter="true"
+floatingFooter="true" 
+showFooter="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" 
 >
     <customHeader>
         <Bar>
@@ -29,23 +30,47 @@ floatingFooter="true"
     </customHeader>
 
     <OverflowToolbar
+        visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
         design="Solid"
         class="sapUiSmallMarginTopBottom"
         height="6vh"
     >
         <ToolbarSpacer />
         <ToolbarSpacer />
-        <Text 
-            text="AVIOMETAL, Via Sempione 15  Arsago Seprio VA    "
-            class="title"
+        <Title
+            text="{i18n>Fornitore}"
+            titleStyle="H3"
+            visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
         />
     </OverflowToolbar>
+
     <content>
         <core:Fragment fragmentName="listardo.listardo.view.Fragment.filterBar" />
         <core:Fragment fragmentName="listardo.listardo.view.Fragment.treeTable" />
     </content>
-    <footer class="sapUiLargeMarginTop">
-        <OverflowToolbar design="Transparent"></OverflowToolbar>
+    <footer>
+        <OverflowToolbar design="Solid">
+            <Button
+                icon="sap-icon://print"
+                text="{i18n>StampaRdO}"
+                type="Emphasized"
+                
+            />
+            <ToolbarSpacer/>
+            <Button
+            icon="sap-icon://print"
+            text="{i18n>SaveBozza}"
+            type="Emphasized"
+            
+        />
+        <ToolbarSpacer/>
+        <Button
+        icon="sap-icon://print"
+        text="{i18n>Save}"
+        type="Emphasized"
+        
+    />
+        </OverflowToolbar>
     </footer>
     </Page>
 </mvc:View>

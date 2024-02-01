@@ -53,7 +53,7 @@
     </extension>
     
     <columns>
-      <Column>
+      <Column width="10rem">
         <m:Label text="{i18n>Richiesta}" />
         <template>
           <m:Text text="{richiesteModel>richiesta}" wrapping="false" />      
@@ -62,7 +62,11 @@
       <Column width="6rem" hAlign="Center" >
         <m:Label text="{i18n>TestoEsteso}" />
         <template>
-          <core:Icon height="2.5rem" color="blue" size="1.5rem" src="{richiesteModel>testo_esteso}"></core:Icon>
+           <m:Button
+              icon="{richiesteModel>testo_esteso}"
+              type="Emphasized"
+              visible="{= !${richiesteModel>testo_esteso}? false : true }"
+              />
         </template>
       </Column>
       <Column width="4rem" hAlign="Center">
@@ -77,7 +81,7 @@
           <m:Text text="{richiesteModel>Materiale}" wrapping="false" />   
         </template>
       </Column>
-      <Column>
+      <Column width="19rem">
         <m:Label text="{i18n>TestoBreve}" />
         <template>
           <m:Text text="{richiesteModel>testo_breve}" wrapping="false" />   
@@ -89,7 +93,7 @@
           <m:Text text="{richiesteModel>data}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="5rem" hAlign="Center">
+      <Column width="4.5rem" hAlign="Center">
         <m:Label text="{i18n>Quantita}" />
         <template>
           <m:Text text="{richiesteModel>quantita}" wrapping="false" />   
@@ -104,31 +108,49 @@
       <Column width="5rem" hAlign="Center">
         <m:Label text="{i18n>DocBOM}" />
         <template>
-          <core:Icon color="blue" size="1.5rem" src="{richiesteModel>bom}" />   
+          <m:Button
+          icon="{richiesteModel>bom}"
+          type="Emphasized"
+          visible="{= !${richiesteModel>bom}? false : true }"
+          />
         </template>
       </Column>
-      <Column width="6rem">
+      <Column width="8.5rem">
         <m:Label text="{i18n>Leadtime}" />
         <template>
-          <m:Text text="{richiesteModel>leadtime}" wrapping="false" />   
+          <m:DatePicker value="{richiesteModel>leadtime}" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" visible="{= !${richiesteModel>leadtime}? false : true }" />   
         </template>
       </Column>
       <Column width="4rem" hAlign="Center">
         <m:Label text="{i18n>Prezzo}" />
         <template>
-          <m:Text text="{richiesteModel>prezzo}" wrapping="false" />   
+          <m:Input value="{richiesteModel>prezzo}" visible="{= !${richiesteModel>prezzo}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
         </template>
       </Column>
-      <Column width="9rem" hAlign="Center">
+      <Column width="8.5rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>allegato}"  />
         <template>
-          <core:Icon color="blue" size="1.5rem" src="{richiesteModel>allegato}" />   
+          <m:Button
+              icon="{richiesteModel>allegato}"
+              type="Emphasized"
+              visible="{= !${richiesteModel>allegato}? false : true }"
+              />
         </template>
       </Column>
-      <Column width="4rem" hAlign="Center">
+      <Column width="4rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>Stato}" />
         <template>
-          <core:Icon color="{richiesteModel>color}" size="1.5rem" src="{richiesteModel>stato}" />   
+          <core:Icon color="{richiesteModel>color}" height="2.5rem" size="1.5rem" src="{richiesteModel>stato}" />   
+        </template>
+      </Column>   
+      <Column hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
+        <m:Label text="{i18n>Inserisci}" />
+        <template>
+          <m:Button
+              icon="sap-icon://upload"
+              type="Emphasized"
+              visible="{= !${richiesteModel>allegato}? false : true }"
+              />
         </template>
       </Column>   
     </columns>
