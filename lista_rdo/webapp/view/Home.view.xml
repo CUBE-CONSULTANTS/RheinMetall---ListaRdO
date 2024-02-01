@@ -7,7 +7,7 @@ xmlns:layout="sap.ui.layout">
 <Page
 class="sapUiResponsivePadding--header sapUiResponsivePadding--footer sapUiResponsivePadding--content"
 floatingFooter="true" 
-showFooter="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" 
+showFooter="true" 
 >
     <customHeader>
         <Bar>
@@ -51,6 +51,7 @@ showFooter="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
     <footer>
         <OverflowToolbar design="Solid">
             <Button
+                visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
                 icon="sap-icon://print"
                 text="{i18n>StampaRdO}"
                 type="Emphasized"
@@ -58,6 +59,7 @@ showFooter="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
             />
             <ToolbarSpacer/>
             <Button
+            visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
             icon="sap-icon://print"
             text="{i18n>SaveBozza}"
             type="Emphasized"
@@ -65,6 +67,7 @@ showFooter="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
         />
         <ToolbarSpacer/>
         <Button
+        visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
         icon="sap-icon://print"
         text="{i18n>Save}"
         type="Emphasized"
