@@ -38,8 +38,8 @@ showFooter="true"
         <ToolbarSpacer />
         <ToolbarSpacer />
         <Title
-            text="{i18n>Fornitore}"
-            titleStyle="H3"
+            text="AVIOMETAL, Via Sempione 15  Arsago Seprio VA"
+            titleStyle="H4"
             visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
         />
     </OverflowToolbar>

@@ -10,6 +10,7 @@
     rows="{path: 'richiesteModel>/dati', parameters: {arrayNames: ['posizioni']}}"
     selectionMode="None"
     class="table sapUiMediumMarginBottom" 
+    cellClick="onOpenBom"
     >
     <extension>
      <m:OverflowToolbar >
@@ -52,7 +53,7 @@
 </m:OverflowToolbar>
     </extension>  
     <columns>
-      <Column width="10rem">
+      <Column width="9rem">
         <m:Label text="{i18n>Richiesta}" />
         <template>
           <m:Text text="{richiesteModel>richiesta}" wrapping="false" />      
@@ -74,7 +75,7 @@
           <m:Text text="{richiesteModel>posizione}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="6rem">
+      <Column width="7rem">
         <m:Label text="{i18n>Materiale}" />
         <template>
           <m:Text text="{richiesteModel>Materiale}" wrapping="false" />   
@@ -86,7 +87,7 @@
           <m:Text text="{richiesteModel>testo_breve}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="6rem">
+      <Column width="8rem" hAlign="Center">
         <m:Label text="{i18n>Consegna}" />
         <template>
           <m:Text text="{richiesteModel>data}" wrapping="false" />   
@@ -104,7 +105,7 @@
           <m:Text text="{richiesteModel>udm}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="5rem" hAlign="Center">
+      <!-- <Column width="5rem" hAlign="Center">
         <m:Label text="{i18n>DocBOM}" />
         <template>
           <m:Button
@@ -113,14 +114,14 @@
           visible="{= !${richiesteModel>bom}? false : true }"
           />
         </template>
-      </Column>
-      <Column width="8.5rem">
+      </Column> -->
+      <Column width="8.4rem">
         <m:Label text="{i18n>Leadtime}" />
         <template>
           <m:DatePicker value="{richiesteModel>leadtime}" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" visible="{= !${richiesteModel>leadtime}? false : true }" />   
         </template>
       </Column>
-      <Column width="4rem" hAlign="Center">
+      <Column width="6rem" hAlign="Center">
         <m:Label text="{i18n>Prezzo}" />
         <template>
           <m:Input value="{richiesteModel>prezzo}" visible="{= !${richiesteModel>prezzo}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
@@ -130,6 +131,7 @@
         <m:Label text="{i18n>allegato}"  />
         <template>
           <m:Button
+              press="onOpenAllegati"
               icon="{richiesteModel>allegato}"
               type="Emphasized"
               visible="{= !${richiesteModel>allegato}? false : true }"
@@ -146,6 +148,7 @@
         <m:Label text="{i18n>Inserisci}" />
         <template>
           <m:Button
+              press="onUploadAllegati"
               icon="sap-icon://upload"
               type="Emphasized"
               visible="{= !${richiesteModel>allegato}? false : true }"
