@@ -3,7 +3,7 @@
     {
       "richiesta": "6500000160",
       "testo_esteso": "sap-icon://document",
-      "cellIcon": "qualcosa"
+      
       "posizioni": [
         {
           "posizione": "10",
@@ -229,11 +229,11 @@
       "doc": [
         {
           "name": "Purchade Order",
-          "src": "ordini_acquisto/webapp/public/documents/6500000160.pdf"
+          "src": "../../public/images/Screenshot_095254.jpg"
         },
         {
           "name": "Quotation No. 32022618",
-          "src": "ordini_acquisto/webapp/public/documents/6500000160_Quotation32022618_20240201135031.137_X.pdf"
+          "src": "../../public/images/Screenshot_095456.jpg"
         }
       ]
     }

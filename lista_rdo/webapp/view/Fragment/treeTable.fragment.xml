@@ -66,6 +66,7 @@
               icon="{richiesteModel>testo_esteso}"
               type="Emphasized"
               visible="{= !${richiesteModel>testo_esteso}? false : true }"
+              press="onOpenTesti"
               />
         </template>
       </Column>
@@ -78,7 +79,8 @@
       <Column width="7rem">
         <m:Label text="{i18n>Materiale}" />
         <template>
-          <m:Text text="{richiesteModel>Materiale}" wrapping="false" />   
+          <m:Text text="{richiesteModel>Materiale}"  wrapping="false" />  
+          
         </template>
       </Column>
       <Column width="19rem">
