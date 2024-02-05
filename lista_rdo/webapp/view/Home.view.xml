@@ -30,7 +30,7 @@ showFooter="true"
     </customHeader>
 
     <OverflowToolbar
-        visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
+        visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : false }"
         design="Solid"
         class="sapUiSmallMarginTopBottom"
         height="6vh"

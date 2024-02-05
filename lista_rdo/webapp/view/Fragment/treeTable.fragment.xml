@@ -4,6 +4,7 @@
   xmlns:m="sap.m"
   xmlns:u="sap.ui.unified"
   xmlns:core="sap.ui.core"
+  
 >
   <TreeTable
     id="TreeTableBasic"
@@ -70,6 +71,12 @@
               />
         </template>
       </Column>
+      <Column width="6rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
+        <m:Label text="{i18n>Fornitore}" />
+        <template>
+          <m:Text  text="{richiesteModel>fornitore}" wrapping="false" />   
+        </template>
+      </Column>
       <Column width="4rem" hAlign="Center">
         <m:Label text="{i18n>Pos}" />
         <template>
@@ -79,11 +86,11 @@
       <Column width="7rem">
         <m:Label text="{i18n>Materiale}" />
         <template>
-          <m:Text text="{richiesteModel>Materiale}"  wrapping="false" />  
+          <m:Text text="{richiesteModel>Materiale}"  wrapping="false"  />  
           
         </template>
       </Column>
-      <Column width="19rem">
+      <Column width="17rem">
         <m:Label text="{i18n>TestoBreve}" />
         <template>
           <m:Text text="{richiesteModel>testo_breve}" wrapping="false" />   
@@ -123,13 +130,13 @@
           <m:DatePicker value="{richiesteModel>leadtime}" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" visible="{= !${richiesteModel>leadtime}? false : true }" />   
         </template>
       </Column>
-      <Column width="6rem" hAlign="Center">
+      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '6rem' : '10rem' }" hAlign="Center">
         <m:Label text="{i18n>Prezzo}" />
         <template>
           <m:Input value="{richiesteModel>prezzo}" visible="{= !${richiesteModel>prezzo}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
         </template>
       </Column>
-      <Column width="8.5rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
+      <Column width="4.5rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>allegato}"  />
         <template>
           <m:Button

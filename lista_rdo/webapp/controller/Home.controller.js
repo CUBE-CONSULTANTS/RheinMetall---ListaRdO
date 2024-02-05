@@ -19,7 +19,11 @@ sap.ui.define(
         let data = await objJSon.json();
 
 				let oModel= new JSONModel(data)
-				this.setModel(oModel,"richiesteModel");
+				this.setModel(oModel,"richiesteModel");        
+      },
+      formatCellColor: function(material) {
+        debugger
+        return (material === "RU403051AE") ? "textColor" : "";
       },
       onOpenBom: function(oEvent){
         debugger
