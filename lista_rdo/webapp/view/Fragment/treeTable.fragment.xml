@@ -8,7 +8,7 @@
   <TreeTable
     id="TreeTableBasic"
     rows="{path: 'richiesteModel>/dati', parameters: {arrayNames: ['posizioni']}}"
-    selectionMode="None"
+    selectionMode="Multi"
     class="table sapUiMediumMarginBottom" 
     cellClick="onOpenBom"
     >
@@ -54,7 +54,7 @@
     </extension>  
 
     <columns>
-      <Column width="9rem">
+      <Column width="8rem">
         <m:Label text="{i18n>Richiesta}" />
         <template>
           <m:ObjectStatus text="{richiesteModel>richiesta}" wrapping="false" />      
@@ -77,7 +77,7 @@
           <m:Text  text="{richiesteModel>fornitore}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="4rem" hAlign="Center">
+      <Column width="3.5rem" hAlign="Center">
         <m:Label text="{i18n>Pos}" />
         <template>
           <m:Text text="{richiesteModel>posizione}" wrapping="false" />   
