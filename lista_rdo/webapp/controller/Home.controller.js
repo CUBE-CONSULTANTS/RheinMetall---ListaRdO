@@ -13,17 +13,23 @@ sap.ui.define(
 
     return BaseController.extend("listardo.listardo.controller.Home", {
       onInit: async function () {
+        debugger
         this.userType = this.getOwnerComponent().getModel("userModel").getProperty("/tipoUtente");
         debugger;
         let objJSon = await fetch("/model/modMock.json");
         let data = await objJSon.json();
 
 				let oModel= new JSONModel(data)
-				this.setModel(oModel,"richiesteModel");        
-      },
-      formatCellColor: function(material) {
+				this.setModel(oModel,"richiesteModel");      
+        let oTable = this.byId("TreeTableBasic");
+        oTable.attachRowsUpdated(this.onTableRowsUpdated, this);
+      }, 
+      onTableRowsUpdated: function(oEvent) {
         debugger
-        return (material === "RU403051AE") ? "textColor" : "";
+        this.handleExpandedRow(oEvent)
+      },    
+      handleExpandedRow: function(oEvent) {
+       debugger
       },
       onOpenBom: function(oEvent){
         debugger
