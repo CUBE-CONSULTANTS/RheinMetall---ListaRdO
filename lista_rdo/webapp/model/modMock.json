@@ -14,7 +14,8 @@
           "quantita": "900",
           "bom": "",
           "leadtime": "01/06/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         }
       ],
       "allegato": "sap-icon://search",
@@ -35,7 +36,8 @@
           "quantita": "3",
           "bom": "sap-icon://download",
           "leadtime": "10/02/2024",
-          "prezzo": "2.082,00"
+          "prezzo": "2.082,00",
+          "divisa": "EUR"
           
         },
         {
@@ -47,7 +49,8 @@
           "quantita": "12",
           "bom": "",
           "leadtime": "10.02.2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
 
         {
@@ -59,7 +62,8 @@
           "quantita": "10",
           "bom": "",
           "leadtime": "10.02.2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
 
         {
@@ -71,7 +75,8 @@
           "quantita": "10",
           "bom": "sap-icon://download",
           "leadtime": "10.02.2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
 
         {
@@ -83,7 +88,8 @@
           "quantita": "10",
           "bom": "sap-icon://download",
           "leadtime": "10.02.2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         }
       ],
       "allegato": "sap-icon://search",
@@ -104,7 +110,8 @@
           "quantita": "20",
           "bom": "",
           "leadtime": "01/06/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
 
         {
@@ -116,7 +123,8 @@
           "quantita": "20",
           "bom": "sap-icon://download",
           "leadtime": "01/06/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
 
         {
@@ -128,7 +136,8 @@
           "quantita": "20",
           "bom": "",
           "leadtime": "01/06/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
 
         {
@@ -140,7 +149,8 @@
           "quantita": "20",
           "bom": "sap-icon://download",
           "leadtime": "01/06/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
         {
           "posizione": "50",
@@ -151,7 +161,8 @@
           "quantita": "20",
           "bom": "sap-icon://download",
           "leadtime": "01/06/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
         {
           "posizione": "60",
@@ -162,7 +173,8 @@
           "quantita": "20",
           "bom": "",
           "leadtime": "10/02/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
 
         {
@@ -174,7 +186,8 @@
           "quantita": "20",
           "bom": "",
           "leadtime": "10/02/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         }
       ],
 
@@ -196,7 +209,8 @@
           "quantita": "20",
           "bom": "",
           "leadtime": "01/06/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
 
         {
@@ -208,7 +222,8 @@
           "quantita": "20",
           "bom": "sap-icon://download",
           "leadtime": "01/06/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
 
         {
@@ -220,7 +235,8 @@
           "quantita": "20",
           "bom": "",
           "leadtime": "01/06/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         },
 
         {
@@ -232,7 +248,8 @@
           "quantita": "20",
           "bom": "sap-icon://download",
           "leadtime": "01/06/2024",
-          "prezzo": "100"
+          "prezzo": "100",
+          "divisa": "EUR"
         }
         
       ],
