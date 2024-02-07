@@ -74,12 +74,14 @@
 					<m:Button						
 							icon="{bomDialog>tEsteso}"
 							type="Emphasized"
+							press="onOpenTestiBom"
 					/>
 				</m:cells>
 				<m:cells>
 					<m:Button						
 							icon="{bomDialog>Allegati}"
 							type="Emphasized"
+							press="onOpenAllegatoBom"
 					/>
 				</m:cells>
 			</m:ColumnListItem>

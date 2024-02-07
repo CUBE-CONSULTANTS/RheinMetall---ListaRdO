@@ -7,7 +7,7 @@
     contentWidth="100%"
 	>
   <Image
-			src=""
+			src="{pdfModel>/source}"
 			useMap=""
 			width=""
 	>

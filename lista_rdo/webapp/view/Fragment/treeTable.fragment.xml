@@ -8,7 +8,7 @@
   <TreeTable
     id="TreeTableBasic"
     rows="{path: 'richiesteModel>/dati', parameters: {arrayNames: ['posizioni']}}"
-    selectionMode="Multi"
+    selectionBehavior="RowOnly"
     class="table sapUiMediumMarginBottom" 
     cellClick="onOpenBom"
     >
@@ -54,14 +54,14 @@
     </extension>  
 
     <columns>
-      <Column width="8rem">
+      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '8rem' : '16.5rem' }">
         <m:Label text="{i18n>Richiesta}" />
         <template>
           <m:ObjectStatus text="{richiesteModel>richiesta}" wrapping="false" />      
         </template>
       </Column>
       <Column width="6rem" hAlign="Center" >
-        <m:Label text="{i18n>TestoEsteso}" />
+        <m:Label text="{i18n>Testi}" />
         <template>
            <m:Button
               icon="{richiesteModel>testo_esteso}"
@@ -71,7 +71,7 @@
               />
         </template>
       </Column>
-      <Column width="6rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
+      <Column width="7.5rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>Fornitore}" />
         <template>
           <m:Text  text="{richiesteModel>fornitore}" wrapping="false" />   
@@ -153,7 +153,7 @@
           <core:Icon color="{richiesteModel>color}" height="2.5rem" size="1.5rem" src="{richiesteModel>stato}" />   
         </template>
       </Column>   
-      <Column hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
+      <Column width="4.5rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
         <m:Label text="{i18n>Inserisci}" />
         <template>
           <m:Button

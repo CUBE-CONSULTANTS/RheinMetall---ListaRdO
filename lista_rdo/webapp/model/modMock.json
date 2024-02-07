@@ -256,7 +256,9 @@
           "Sps": "False",
           "QtaFissa": "True",
           "tEsteso": "sap-icon://document-text",
-          "Allegati": "sap-icon://search"
+          "Allegati": "sap-icon://search",
+          "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
+          "All": "../../public/images/ZINQ4A0000796_page-0001.jpg"
         },
         {
           "Pos": "0004",
@@ -269,7 +271,9 @@
           "Sps": "False",
           "QtaFissa": "True",
           "tEsteso": "sap-icon://document-text",
-          "Allegati": "sap-icon://search"
+          "Allegati": "sap-icon://search",
+          "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
+          "All": ""
         },
         {
           "Pos": "0007",
@@ -282,7 +286,9 @@
           "Sps": "True",
           "QtaFissa": "False",
           "tEsteso": "sap-icon://document-text",
-          "Allegati": "sap-icon://search"
+          "Allegati": "sap-icon://search",
+          "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
+          "All": ""
         },
         {
           "Pos": "0010",
@@ -295,7 +301,9 @@
           "Sps": "False",
           "QtaFissa": "False",
           "tEsteso": "sap-icon://document-text",
-          "Allegati": "sap-icon://search"
+          "Allegati": "sap-icon://search",
+          "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
+          "All": ""
         },
         {
           "Pos": "0020",
@@ -308,7 +316,9 @@
           "Sps": "False",
           "QtaFissa": "True",
           "tEsteso": "sap-icon://document-text",
-          "Allegati": "sap-icon://search"
+          "Allegati": "sap-icon://search",
+          "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
+          "All": ""
         }
       ]
     }

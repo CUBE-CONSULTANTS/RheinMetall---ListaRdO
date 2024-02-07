@@ -61,6 +61,17 @@ sap.ui.define(
         this.onOpenDialog("pDialog","listardo.listardo.view.Fragment.listaAllegati",this,"allegatiDialog")     
         }    
       },
+      onOpenAllegatoBom:function (oEvent){
+        debugger
+        let objSel = oEvent.getSource().getBindingContext("bomDialog").getObject().All
+        let oModel = new JSONModel(objSel)
+        this.setModel(oModel,"oImmAll")
+        let pdfModel = new JSONModel()
+        
+        this.setModel(pdfModel,"pdfModel")
+        this.getModel("pdfModel").setProperty("/source",objSel)
+        this.onOpenDialog("pDialog","listardo.listardo.view.Fragment.imageAll",this,"pdfModel")
+      },
       onSelectAllegato: function (oEvent){
       debugger
       let src = oEvent.getSource().getBindingContext("allegatiDialog").getObject().src
@@ -91,6 +102,33 @@ sap.ui.define(
             const oJsonModel = new JSONModel();
             oPopover.setModel(oJsonModel, "testiPopover");
             // oPopover.getModel("testiPopover").setProperty("/", ogg);
+            return oPopover;
+          });
+        }
+        this._pPopover.then(function (oPopover) {
+          oPopover.openBy(oButton);
+        });        
+      },
+      onOpenTestiBom: function (oEvent){
+        debugger
+        this.setModel(new JSONModel(), "testiBom");
+        let oButton = oEvent.getSource()
+        let oView = this.getView()
+      
+        let objSel = oEvent.getSource().getBindingContext("bomDialog").getObject().Testi
+        this.getModel("testiBom").setProperty("/", objSel);
+
+        if (!this._qPopover) {
+          this._pPopover = Fragment.load({
+            id: oView.getId(),
+            name: "listardo.listardo.view.Fragment.testoEsteso",
+            controller: this,
+          }).then(function (oPopover) {
+            oView.addDependent(oPopover);
+            let ogg = oView.getModel("testiBom").getData();
+            const oJsonModel = new JSONModel();
+            oPopover.setModel(oJsonModel, "testiPopover");
+            oPopover.getModel("testiPopover").setProperty("/testi", ogg);
             return oPopover;
           });
         }
