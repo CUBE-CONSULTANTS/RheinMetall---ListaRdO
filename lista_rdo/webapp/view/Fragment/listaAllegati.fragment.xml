@@ -13,7 +13,7 @@
       <content>
             <HBox>
                 <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
-                    <Title/>                                   
+                  <Title text="{allegatiDialog>name}"/>                                      
                 </VBox>
             </HBox>
         </content>

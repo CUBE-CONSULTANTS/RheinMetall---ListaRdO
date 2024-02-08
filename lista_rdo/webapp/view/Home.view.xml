@@ -60,7 +60,7 @@ showFooter="true"
             <ToolbarSpacer/>
             <Button
             visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
-            icon="sap-icon://print"
+            icon="sap-icon://save"
             text="{i18n>SaveBozza}"
             type="Emphasized"
             
@@ -68,7 +68,7 @@ showFooter="true"
         <ToolbarSpacer/>
         <Button
         visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
-        icon="sap-icon://print"
+        icon="sap-icon://accept"
         text="{i18n>Save}"
         type="Emphasized"
         
