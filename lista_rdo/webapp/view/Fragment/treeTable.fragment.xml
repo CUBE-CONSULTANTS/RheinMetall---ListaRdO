@@ -10,7 +10,7 @@
     rows="{path: 'richiesteModel>/dati', parameters: {arrayNames: ['posizioni']}}"
     selectionBehavior="RowOnly"
     class="table sapUiMediumMarginBottom" 
-    cellClick="onOpenBom"
+    cellClick="onOpenDetail"
     >
     <extension>
      <m:OverflowToolbar >
@@ -54,13 +54,13 @@
     </extension>  
 
     <columns>
-      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '8rem' : '16rem' }">
+      <Column >
         <m:Label text="{i18n>Richiesta}" />
         <template>
           <m:ObjectStatus text="{richiesteModel>richiesta}" wrapping="false" />      
         </template>
       </Column>
-      <Column width="6rem" hAlign="Center" >
+      <Column  hAlign="Center" >
         <m:Label text="{i18n>Testi}" />
         <template>
            <m:Button
@@ -71,44 +71,44 @@
               />
         </template>
       </Column>
-      <Column width="7.5rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
+      <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>Fornitore}" />
         <template>
           <m:Text  text="{richiesteModel>fornitore}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="3.5rem" hAlign="Center">
+      <Column  hAlign="Center">
         <m:Label text="{i18n>Pos}" />
         <template>
           <m:Text text="{richiesteModel>posizione}" wrapping="false" />   
         </template>
       </Column>
-      <Column  width="7rem">
+      <Column  >
         <m:Label text="{i18n>Materiale}" />
         <template>
           <m:ObjectStatus text="{richiesteModel>Materiale}" state="{= ${richiesteModel>Materiale} === 'RU403051AE' ? 'Information' : null }"
              />          
         </template>
       </Column>
-      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '11rem' : '15.5rem' }" >
+      <Column  >
         <m:Label text="{i18n>TestoBreve}" />
         <template>
           <m:Text text="{richiesteModel>testo_breve}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="8rem" hAlign="Center">
+      <Column  hAlign="Center">
         <m:Label text="{i18n>Consegna}" />
         <template>
           <m:Text text="{richiesteModel>data}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="4.5rem" hAlign="Center">
+      <Column  hAlign="Center">
         <m:Label text="{i18n>Quantita}" />
         <template>
           <m:Text text="{richiesteModel>quantita}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="4rem" hAlign="Center">
+      <Column  hAlign="Center">
         <m:Label text="{i18n>UdM}" />
         <template>
           <m:Text text="{richiesteModel>udm}" wrapping="false" />   
@@ -124,7 +124,7 @@
           />
         </template>
       </Column> -->
-      <Column width="8.4rem">
+      <!-- <Column width="8.4rem">
         <m:Label text="{i18n>Leadtime}" />
         <template>
           <m:DatePicker value="{richiesteModel>leadtime}" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" visible="{= !${richiesteModel>leadtime}? false : true }" />   
@@ -141,8 +141,8 @@
         <template>
           <m:Input  value="{richiesteModel>divisa}" visible="{= !${richiesteModel>divisa}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
         </template>
-      </Column>
-      <Column width="4.5rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
+      </Column> -->
+      <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>allegato}"  />
         <template>
           <m:Button
@@ -153,13 +153,13 @@
               />
         </template>
       </Column>
-      <Column width="4rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
+      <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>Stato}" />
         <template>
           <core:Icon color="{richiesteModel>color}" height="2.5rem" size="1.5rem" src="{richiesteModel>stato}" />   
         </template>
       </Column>   
-      <Column width="4.5rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
+      <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
         <m:Label text="{i18n>Inserisci}" />
         <template>
           <m:Button

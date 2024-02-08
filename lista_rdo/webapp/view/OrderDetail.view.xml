@@ -1,0 +1,248 @@
+<mvc:View xmlns:table="sap.ui.table"
+  controllerName="listardo.listardo.controller.Detail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	xmlns:c="sap.ui.core"
+  xmlns:u="sap.ui.unified"
+	xmlns="sap.uxap"
+	xmlns:layout="sap.ui.layout"
+	xmlns:m="sap.m"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		upperCaseAnchorBar="false"
+		preserveHeaderStateOnScroll="true"
+		showFooter="true"
+		toggleHeaderOnTitleClick="false"
+	>
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<heading>
+					<m:Title
+						text="Specifiche Richiesta d'Offerta - 6500000160"
+						class="title"
+					/>
+				</heading>
+				<actions>
+					<layout:HorizontalLayout allowWrapping="true">
+						<layout:VerticalLayout>
+							
+						</layout:VerticalLayout>
+					</layout:HorizontalLayout>
+				</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		<headerContent >
+				<m:FlexBox
+					justifyContent="SpaceBetween"
+        	alignItems="Start"
+				>
+				<m:VBox
+            class="sapUiResponsiveContentPadding vboxDati"
+            width="20%"
+        >
+					<m:Text text="Testo di Testata" />
+					
+
+				</m:VBox>
+				<m:VBox
+            class="sapUiResponsiveContentPadding vboxDati"
+            width="20%"
+        >
+								
+					</m:VBox>
+				 <m:VBox
+            class="sapUiResponsiveContentPadding vboxDati"      
+            alignItems="Start"    
+						width="60%"      
+        >
+					<m:Text text="{i18n>TestoEsteso}: {modDetail>/Qmnum/0/TestoEsteso}" visible="{=${modDetail>/Qmnum/0/TestoEsteso} === '' ? false : true}" />
+				</m:VBox>
+			</m:FlexBox>
+		</headerContent>
+		<sections>
+			<ObjectPageSection
+				titleUppercase="false"
+				title="TESTATA"
+			>
+				<subSections>
+					<ObjectPageSubSection
+						title="Testata"
+						titleUppercase="false"
+					>
+						<blocks>
+							<m:Table
+								items=""
+								growing="true"
+							>
+								<m:columns>
+									<m:Column>
+										<m:Text text="Allegato" />
+									</m:Column>
+									<m:Column>
+										<m:Text text="{i18n>Descrizione}" />
+									</m:Column>		
+                  <m:Column>
+										<m:Text text="{i18n>Carica}" />
+									</m:Column>							
+									<m:Column>
+										<m:Text text="{i18n>Scarica}" />
+									</m:Column>
+								</m:columns>
+								<m:ColumnListItem>
+									<m:cells>
+										<m:Text text="Allegato1" />
+									</m:cells>
+									<m:cells>
+										<m:Text text="TEST TEST TEST" />
+									</m:cells>
+                  <m:cells>
+										<m:Button icon="sap-icon://upload"  type="Emphasized"/>
+									</m:cells>
+									<m:cells>
+										<m:Button icon="sap-icon://download"  type="Emphasized" />
+									</m:cells>
+
+								</m:ColumnListItem>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection
+				titleUppercase="false"
+				title="Materiali"
+			>
+				<subSections>
+					<ObjectPageSubSection
+						title="Materiali"
+						titleUppercase="false"
+					>
+						<blocks>
+							<table:TreeTable 
+              rows="{path: 'detailModel>/' , parameters: {arrayNames: ['bom']}}"
+                selectionBehavior="RowOnly"
+                class="table sapUiMediumMarginBottom" >
+                <table:columns>
+                <table:Column  hAlign="Center">
+                  <m:Label text="{i18n>Pos}" />
+                 <table:template>
+                  
+                
+                    <m:Text text="{detailModel>posizione}" wrapping="false" />   
+                  </table:template>
+                </table:Column>
+                <table:Column>
+                  <m:Label text="{i18n>Materiale}" />
+                    <table:template>
+                    <m:ObjectStatus text="{detailModel>Materiale}" state="{= ${detailModel>Materiale} === 'RU403051AE' ? 'Information' : null }"
+                       />          
+                    </table:template>
+                    </table:Column>
+                    <table:Column>
+                  <m:Label text="{i18n>TestoBreve}" />
+                    <table:template>
+                    <m:Text text="{detailModel>testo_breve}" wrapping="false" />   
+                  </table:template>
+                </table:Column>
+                <table:Column  hAlign="Center">
+                  <m:Label text="{i18n>Consegna}" />
+                    <table:template>
+                    <m:Text text="{detailModel>data}" wrapping="false" />   
+                    </table:template>
+                  </table:Column>
+                  <table:Column hAlign="Center">
+                  <m:Label text="{i18n>Quantita}" />
+                    <table:template>
+                    <m:Text text="{detailModel>quantita}" wrapping="false" />   
+                    </table:template>
+                </table:Column>
+                <table:Column  hAlign="Center">
+                  <m:Label text="{i18n>UdM}" />
+                    <table:template>
+                    <m:Text text="{detailModel>udm}" wrapping="false" />   
+                    </table:template>
+                  </table:Column>
+                
+                <table:Column  width="8.4rem">
+                  <m:Label text="{i18n>Leadtime}" />
+                  <table:template>
+                    <m:DatePicker value="{detailModel>leadtime}" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" visible="{= !${detailModel>leadtime}? false : true }" />   
+                    </table:template>
+                </table:Column >
+                <table:Column  width="{= ${userModel>/tipoUtente} === 'Interno' ? '6rem' : '6rem' }" hAlign="Center">
+                  <m:Label text="{i18n>Prezzo}" />
+                  <table:template>
+                    <m:Input value="{detailModel>prezzo}" visible="{= !${detailModel>prezzo}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
+                    </table:template>
+                </table:Column >
+                <table:Column  width="{= ${userModel>/tipoUtente} === 'Interno' ? '6rem' : '6rem' }" hAlign="Center">
+                  <m:Label text="{i18n>divisa}"  />
+                  <table:template>
+                    <m:Input  value="{detailModel>divisa}" visible="{= !${detailModel>divisa}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
+                    </table:template>
+                </table:Column > 
+                <table:Column  hAlign="Center">
+                  <m:Label text="Testi Estesi"  />
+                  <table:template>
+                    <m:Button  type="Emphasized"
+                    icon="{detailModel>tEsteso}"
+                    visible="{= !${detailModel>tEsteso}? false : true }"
+                    press="onOpenTestiBom" />   
+                    </table:template>
+                </table:Column > 
+                <table:Column  width="{= ${userModel>/tipoUtente} === 'Interno' ? '6rem' : '6rem' }" hAlign="Center">
+                  <m:Label text="Allegati"  />
+                  <table:template>
+                    <m:Button  type="Emphasized"
+                    icon="{detailModel>Allegati}"
+                    visible="{= !${detailModel>Allegati}? false : true }"
+                    press="onOpenAllegatoBom" />                       
+                  </table:template>
+                </table:Column > 
+              </table:columns>
+              </table:TreeTable>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+		<footer>
+			<m:OverflowToolbar>
+				<m:Button
+					type="Emphasized"
+					text="{i18n>Back}"
+					icon="sap-icon://undo"
+					press="onNav"
+				/>
+          
+            <m:ToolbarSpacer/>
+            <m:Button
+                visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
+                icon="sap-icon://print"
+                text="{i18n>StampaRdO}"
+                type="Emphasized"
+                
+            />
+            <m:Button
+            visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
+            icon="sap-icon://save"
+            text="{i18n>SaveBozza}"
+            type="Emphasized"
+            
+        />
+        <m:ToolbarSpacer/>
+        <m:Button
+        visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
+        icon="sap-icon://accept"
+        text="{i18n>Save}"
+        type="Emphasized"
+        
+    />
+			</m:OverflowToolbar>
+		</footer>
+	</ObjectPageLayout>
+</mvc:View>

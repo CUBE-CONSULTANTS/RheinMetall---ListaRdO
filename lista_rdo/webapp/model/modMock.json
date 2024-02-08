@@ -37,7 +37,49 @@
           "bom": "sap-icon://download",
           "leadtime": "10/02/2024",
           "prezzo": "2.082,00",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "bom": [
+            {
+              "posizione": "0010",           
+              "Materiale": "Q4A0000796",
+              "testo_breve": "LAMINATO FR408HR 0,152MM CU 2X35UM",
+              "quantita": "2",
+              "udm": "PZ",
+
+
+              "tEsteso": "sap-icon://document-text",
+              "Allegati": "sap-icon://search",
+              "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
+              "All": "../../public/images/ZINQ4A0000796_page-0001.jpg"
+            },
+            {
+              "posizione": "0020",
+             
+              "Materiale": "Q4A0000796",
+              "testo_breve": "LAMINATO FR408HR 0,457MM CU 2X35UM",
+              "quantita": "1",
+              "udm": "PZ",
+             
+              "tEsteso": "sap-icon://document-text",
+              "Allegati": "sap-icon://search",
+              "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
+              "All": ""
+            },
+            {
+              "posizione": "0030",
+             
+              "Materiale": "Q4A0000792",
+              "testo_breve": "PREPREG FR408HR 106 20X2''X0,058MM",
+              "quantita": "0,001",
+              "udm": "CM2",
+             
+              "tEsteso": "sap-icon://document-text",
+              "Allegati": "sap-icon://search",
+              "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
+              "All": ""
+            }
+           
+          ]
           
         },
         {

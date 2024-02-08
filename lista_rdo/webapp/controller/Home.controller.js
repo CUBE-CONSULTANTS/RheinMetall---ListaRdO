@@ -43,6 +43,19 @@ sap.ui.define(
           }
         }
       },
+      onOpenDetail: function(oEvent){
+        debugger
+        this.getRouter().navTo("OrderDetail")
+        // let oDatiMat = this.getModel("richiesteModel").getData().bom[0]
+        // let oModel = new JSONModel(oDatiMat)
+    
+        // if(oEvent.getParameter("cellControl").getBindingInfo("text").binding.getPath() === 'Materiale'){
+        //   if(oEvent.getParameter("cellControl").getBindingInfo("text").binding.getValue() === oDatiMat.Materiale){
+        //     this.setModel(oModel, "bomDialog");
+        //     this.onOpenDialog("nDialog","listardo.listardo.view.Fragment.bomDialog",this,"bomDialog")
+        //   }
+        // }
+      },
       onCloseDialog: function(oEvent){
         oEvent.getSource().getParent().close()
       },

@@ -2,8 +2,9 @@ sap.ui.define(
   ["sap/ui/core/mvc/Controller", 
   "sap/ui/model/json/JSONModel",
   "sap/ui/core/Fragment",
+   "sap/ui/core/routing/History", "sap/ui/core/UIComponent"
   ],
-  function (Controller, JSONModel,Fragment) {
+  function (Controller, JSONModel,Fragment,History, UIComponent) {
     "use strict";
 
     return Controller.extend(
@@ -43,6 +44,13 @@ sap.ui.define(
             });
           });
         },
+        navTo: function (psTarget, pmParameters, pbReplace) {
+          this.getRouter().navTo(psTarget, pmParameters, pbReplace);
+      },
+
+      getRouter: function () {
+          return UIComponent.getRouterFor(this);
+      },
         onOpenDialog: function(dialName, fragmName, self, ...oModel) {
           let oView = this.getView();
           dialName = self.dialName;
