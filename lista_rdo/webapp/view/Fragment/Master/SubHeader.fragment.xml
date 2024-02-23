@@ -1,0 +1,16 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<OverflowToolbar
+visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : false }"
+>
+<!-- <ToolbarSpacer />
+<ToolbarSpacer />
+<Title
+    text="AVIOMETAL, Via Sempione 15  Arsago Seprio VA"
+    titleStyle="H4"
+    visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
+/> -->
+</OverflowToolbar>
+</c:FragmentDefinition>

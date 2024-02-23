@@ -36,7 +36,7 @@ sap.ui.define([
       if (!this._qPopover) {
         this._pPopover = Fragment.load({
           id: oView.getId(),
-          name: "listardo.listardo.view.Fragment.testoEsteso",
+          name: "listardo.listardo.view.Fragment.Detail.testoEsteso",
           controller: this,
         }).then(function (oPopover) {
           oView.addDependent(oPopover);
@@ -60,7 +60,7 @@ sap.ui.define([
       
       this.setModel(pdfModel,"pdfModel")
       this.getModel("pdfModel").setProperty("/source",objSel)
-      this.onOpenDialog("pDialog","listardo.listardo.view.Fragment.imageAll",this,"pdfModel")
+      this.onOpenDialog("pDialog","listardo.listardo.view.Fragment.Detail.imageAll",this,"pdfModel")
     },
     onCloseAllegati: function(oEvent){
       oEvent.getSource().getParent().getParent().close()

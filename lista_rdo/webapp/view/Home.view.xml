@@ -6,52 +6,24 @@ xmlns="sap.m"
 xmlns:layout="sap.ui.layout">
 <Page
 class="sapUiResponsivePadding--header sapUiResponsivePadding--footer sapUiResponsivePadding--content"
-floatingFooter="true" 
+floatingFooter="true" enableScrolling="false"
 showFooter="true" 
 >
     <customHeader>
-        <Bar>
-            <contentLeft>
-                <Title
-                    text="{i18n>titleprogetto}"
-                    titleStyle="H3"
-                />
-            </contentLeft>
-            <contentRight>
-                <Image
-                        alt="Rheinmetall Logo"	
-                        height="38.00000000px"
-                        width="100%"
-                        src="../public/images/Rheinmetall_Logo_2021.jpg"
-                >
-                </Image>
-            </contentRight>
-        </Bar>
+        <core:Fragment fragmentName="listardo.listardo.view.Fragment.Master.Header" />
+        
     </customHeader>
 
-    <OverflowToolbar
-        visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : false }"
-        design="Solid"
-        class="sapUiSmallMarginTopBottom"
-        height="6vh"
-    >
-        <ToolbarSpacer />
-        <ToolbarSpacer />
-        <Title
-            text="AVIOMETAL, Via Sempione 15  Arsago Seprio VA"
-            titleStyle="H4"
-            visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
-        />
-    </OverflowToolbar>
+    <subHeader>
+        <core:Fragment fragmentName="listardo.listardo.view.Fragment.Master.SubHeader" />
+    </subHeader>
 
     <content>
-        <core:Fragment fragmentName="listardo.listardo.view.Fragment.filterBar" />
-        <core:Fragment fragmentName="listardo.listardo.view.Fragment.treeTable" />
+        <core:Fragment fragmentName="listardo.listardo.view.Fragment.Master.filterBar" />
+        <core:Fragment fragmentName="listardo.listardo.view.Fragment.Master.treeTable" />
     </content>
     <footer>
-        <OverflowToolbar design="Solid">
-          
-        </OverflowToolbar>
+        <core:Fragment fragmentName="listardo.listardo.view.Fragment.Master.Footer" />
     </footer>
     </Page>
 </mvc:View>

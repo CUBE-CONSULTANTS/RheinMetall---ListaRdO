@@ -6,7 +6,6 @@ xmlns:fb="sap.ui.comp.filterbar"
 >
 
 <fb:FilterBar
-class="sapUiSmallMarginTop"
 search="onFilterAvv"
 clear="onReset"
 showClearOnFB="true"
