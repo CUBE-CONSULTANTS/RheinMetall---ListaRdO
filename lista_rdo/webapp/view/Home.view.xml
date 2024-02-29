@@ -4,14 +4,13 @@ displayBlock="true"
 xmlns:core="sap.ui.core"
 xmlns="sap.m"
 xmlns:layout="sap.ui.layout">
-<Page
+<Page 
 class="sapUiResponsivePadding--header sapUiResponsivePadding--footer sapUiResponsivePadding--content"
-floatingFooter="true" enableScrolling="false"
+floatingFooter="true" enableScrolling="true"
 showFooter="true" 
 >
     <customHeader>
-        <core:Fragment fragmentName="listardo.listardo.view.Fragment.Master.Header" />
-        
+        <core:Fragment fragmentName="listardo.listardo.view.Fragment.Master.Header" />      
     </customHeader>
 
     <subHeader>

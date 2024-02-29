@@ -5,11 +5,13 @@
   xmlns:u="sap.ui.unified"
   xmlns:core="sap.ui.core"
 >
+<m:VBox
+>
   <TreeTable
     id="TreeTableBasic"
     rows="{path: 'richiesteModel>/dati', parameters: {arrayNames: ['posizioni']}}"
     selectionBehavior="RowOnly"
-    class="table sapUiMediumMarginBottom" 
+    class="table" 
     cellClick="onOpenDetail"
     >
     <extension>
@@ -173,4 +175,5 @@
     </columns>
 
   </TreeTable>
+</m:VBox>
 </core:FragmentDefinition>

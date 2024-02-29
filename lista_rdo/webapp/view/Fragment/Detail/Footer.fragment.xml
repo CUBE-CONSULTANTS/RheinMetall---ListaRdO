@@ -5,7 +5,7 @@ xmlns:m="sap.m"
 <m:OverflowToolbar>
 				<m:Button
 					type="Emphasized"
-					text="{i18n>Back}"
+					text="{i18n>Indietro}"
 					icon="sap-icon://undo"
 					press="onNav"
 				/>

@@ -2,7 +2,7 @@
 	xmlns="sap.m"
 	xmlns:c="sap.ui.core"
 >
-<OverflowToolbar design="Solid" >
+<OverflowToolbar >
 	<Button
 	type="Emphasized"
 	text="{i18n>Indietro}"
