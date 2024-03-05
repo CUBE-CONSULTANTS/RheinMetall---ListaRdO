@@ -62,7 +62,7 @@
           <m:ObjectStatus text="{richiesteModel>richiesta}" wrapping="false" />      
         </template>
       </Column>
-      <Column  hAlign="Center" >
+      <!-- <Column  hAlign="Center" >
         <m:Label text="{i18n>Testi}" />
         <template>
            <m:Button
@@ -72,7 +72,7 @@
               press="onOpenTesti"
               />
         </template>
-      </Column>
+      </Column> -->
       <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>Fornitore}" />
         <template>
@@ -144,7 +144,7 @@
           <m:Input  value="{richiesteModel>divisa}" visible="{= !${richiesteModel>divisa}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
         </template>
       </Column> -->
-      <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
+      <!-- <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>allegato}"  />
         <template>
           <m:Button
@@ -154,7 +154,7 @@
               visible="{= !${richiesteModel>allegato}? false : true }"
               />
         </template>
-      </Column>
+      </Column> -->
       <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>Stato}" />
         <template>
