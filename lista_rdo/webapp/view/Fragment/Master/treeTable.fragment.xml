@@ -161,7 +161,7 @@
           <core:Icon color="{richiesteModel>color}" height="2.5rem" size="1.5rem" src="{richiesteModel>stato}" />   
         </template>
       </Column>   
-      <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
+      <!-- <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
         <m:Label text="{i18n>Inserisci}" />
         <template>
           <m:Button
@@ -171,7 +171,7 @@
               visible="{= !${richiesteModel>allegato}? false : true }"
               />
         </template>
-      </Column>   
+      </Column>    -->
     </columns>
 
   </TreeTable>

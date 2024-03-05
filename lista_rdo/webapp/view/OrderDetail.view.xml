@@ -28,10 +28,10 @@
 		<sections>
 			<ObjectPageSection
 				titleUppercase="false"
-				title="TESTATA"			
+				title="Allegati"			
 			>
 				<subSections>
-					<ObjectPageSubSection title="Testata" >
+					<ObjectPageSubSection title="Allegati" >
 						<blocks>
 							<c:Fragment fragmentName="listardo.listardo.view.Fragment.Detail.Table" />
 						</blocks>

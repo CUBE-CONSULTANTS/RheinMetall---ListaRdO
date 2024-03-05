@@ -6,14 +6,24 @@ xmlns:table="sap.ui.table"
 >
 <table:TreeTable 
 rows="{path: 'detailModel>/' , parameters: {arrayNames: ['bom']}}"
-  selectionBehavior="RowOnly"
+selectionBehavior="RowSelector"
   class="table sapUiMediumMarginBottom" >
+  <table:extension>
+    <m:OverflowToolbar
+    >
+    <m:ToolbarSpacer/>
+    <m:Button
+    icon="sap-icon://download"
+    text="Scarica Documentazione"
+    press="modDataConsegna"
+    type="Emphasized"
+    /> 
+    </m:OverflowToolbar>
+  </table:extension>
   <table:columns>
   <table:Column  hAlign="Center">
     <m:Label text="{i18n>Pos}" />
    <table:template>
-    
-  
       <m:Text text="{detailModel>posizione}" wrapping="false" />   
     </table:template>
   </table:Column>
@@ -68,7 +78,7 @@ rows="{path: 'detailModel>/' , parameters: {arrayNames: ['bom']}}"
       </table:template>
   </table:Column > 
   <table:Column  hAlign="Center">
-    <m:Label text="Testi Estesi"  />
+    <m:Label text="{i18n>Testi}"  />
     <table:template>
       <m:Button  type="Emphasized"
       icon="{detailModel>tEsteso}"
@@ -85,6 +95,20 @@ rows="{path: 'detailModel>/' , parameters: {arrayNames: ['bom']}}"
       press="onOpenAllegatoBom" />                       
     </table:template>
   </table:Column > 
+  <table:Column hAlign="Center" >
+    <m:Label text="Carica Allegato"   />
+    <table:template>
+      <m:Button  type="Emphasized"
+      icon="sap-icon://upload"
+  />                       
+    </table:template>
+  </table:Column > 
+  <table:Column  hAlign="Center" >
+    <m:Label text="{i18n>Stato}" />
+    <table:template>
+      <c:Icon color="{richiesteModel>color}" height="2.5rem" size="1.5rem" src="{richiesteModel>stato}" />   
+    </table:template>
+  </table:Column>   
 </table:columns>
 </table:TreeTable>
 </c:FragmentDefinition>
