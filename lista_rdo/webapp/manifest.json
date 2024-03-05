@@ -87,7 +87,7 @@
         },
         {
           "name": "OrderDetail",
-          "pattern": "OrderDetail",
+          "pattern": "OrderDetail/{Action}/{Status}",
           "target": [
             "TargetDetail"
           ]

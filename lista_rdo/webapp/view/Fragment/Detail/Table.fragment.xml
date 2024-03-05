@@ -5,7 +5,7 @@
     xmlns:table="sap.ui.table"
 >
     <m:Table
-        items=""
+    items="{detailModel>/doc}"
         growing="true"
     >
         <m:headerToolbar>

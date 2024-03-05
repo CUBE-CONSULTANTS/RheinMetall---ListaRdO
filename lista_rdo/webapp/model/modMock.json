@@ -12,10 +12,11 @@
           "data": "31.08.2023",
           "udm": "PZ",
           "quantita": "900",
-          "bom": "",
           "leadtime": "01/06/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         }
       ],
       "allegato": "sap-icon://search",
@@ -38,19 +39,21 @@
           "leadtime": "10/02/2024",
           "prezzo": "2.082,00",
           "divisa": "EUR",
-          "bom": [
+          "status": "sap-icon://status-in-process",
+          "colors": "orange",
+          "posizioni": [
             {
               "posizione": "0010",           
               "Materiale": "Q4A0000796",
               "testo_breve": "LAMINATO FR408HR 0,152MM CU 2X35UM",
               "quantita": "2",
               "udm": "PZ",
-
-
               "tEsteso": "sap-icon://document-text",
               "Allegati": "sap-icon://search",
               "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
-              "All": "../../public/images/ZINQ4A0000796_page-0001.jpg"
+              "All": "../../public/images/ZINQ4A0000796_page-0001.jpg",
+              "status": "sap-icon://status-in-process",
+              "colors": "orange"
             },
             {
               "posizione": "0020",
@@ -59,7 +62,8 @@
               "testo_breve": "LAMINATO FR408HR 0,457MM CU 2X35UM",
               "quantita": "1",
               "udm": "PZ",
-             
+              "status": "sap-icon://status-in-process",
+              "colors": "orange",
               "tEsteso": "sap-icon://document-text",
               "Allegati": "sap-icon://search",
               "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
@@ -72,7 +76,8 @@
               "testo_breve": "PREPREG FR408HR 106 20X2''X0,058MM",
               "quantita": "0,001",
               "udm": "CM2",
-             
+              "status": "sap-icon://status-in-process",
+              "colors": "orange",
               "tEsteso": "sap-icon://document-text",
               "Allegati": "sap-icon://search",
               "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
@@ -92,7 +97,9 @@
           "bom": "",
           "leadtime": "10.02.2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
 
         {
@@ -105,7 +112,9 @@
           "bom": "",
           "leadtime": "10.02.2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
 
         {
@@ -118,7 +127,8 @@
           "bom": "sap-icon://download",
           "leadtime": "10.02.2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",    "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
 
         {
@@ -131,12 +141,24 @@
           "bom": "sap-icon://download",
           "leadtime": "10.02.2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         }
       ],
       "allegato": "sap-icon://search",
       "stato": "sap-icon://status-positive",
-      "color": "green"
+      "color": "green",
+      "doc": [
+        {
+          "name": "Purchase Order",
+          "src": "../../public/images/Screenshot_095254.jpg"
+        },
+        {
+          "name": "Quotation No. 32022618",
+          "src": "../../public/images/Screenshot_095456.jpg"
+        }
+      ]
     },
     {
       "richiesta": "6500000170",
@@ -153,7 +175,9 @@
           "bom": "",
           "leadtime": "01/06/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
 
         {
@@ -166,7 +190,9 @@
           "bom": "sap-icon://download",
           "leadtime": "01/06/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
 
         {
@@ -179,7 +205,9 @@
           "bom": "",
           "leadtime": "01/06/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
 
         {
@@ -192,7 +220,9 @@
           "bom": "sap-icon://download",
           "leadtime": "01/06/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
         {
           "posizione": "50",
@@ -204,7 +234,9 @@
           "bom": "sap-icon://download",
           "leadtime": "01/06/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
         {
           "posizione": "60",
@@ -216,7 +248,9 @@
           "bom": "",
           "leadtime": "10/02/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
 
         {
@@ -229,7 +263,9 @@
           "bom": "",
           "leadtime": "10/02/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         }
       ],
 
@@ -252,7 +288,9 @@
           "bom": "",
           "leadtime": "01/06/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
 
         {
@@ -265,7 +303,8 @@
           "bom": "sap-icon://download",
           "leadtime": "01/06/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",    "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
 
         {
@@ -278,7 +317,9 @@
           "bom": "",
           "leadtime": "01/06/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         },
 
         {
@@ -291,110 +332,15 @@
           "bom": "sap-icon://download",
           "leadtime": "01/06/2024",
           "prezzo": "100",
-          "divisa": "EUR"
+          "divisa": "EUR",
+          "status": "sap-icon://status-in-process",
+          "colors": "orange"
         }
         
       ],
       "allegato": "sap-icon://search",
       "stato": "sap-icon://status-in-process",
       "color": "orange"
-    }
-  ],
-  "bom": [
-    {
-      "Materiale": "RU403051AE",
-      "posizioni": [
-        {
-          "Pos": "0001",
-          "TipoPos": "R",
-          "Componente": "Q4A0000796",
-          "DefinizioneC": "LAMINATO FR408HR 0,152MM CU 2X35UM",
-          "Qta": "2",
-          "UdM": "PZ",
-          "Ass": "True",
-          "Sps": "False",
-          "QtaFissa": "True",
-          "tEsteso": "sap-icon://document-text",
-          "Allegati": "sap-icon://search",
-          "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
-          "All": "../../public/images/ZINQ4A0000796_page-0001.jpg"
-        },
-        {
-          "Pos": "0004",
-          "TipoPos": "R",
-          "Componente": "Q4A0000796",
-          "DefinizioneC": "LAMINATO FR408HR 0,457MM CU 2X35UM",
-          "Qta": "1",
-          "UdM": "PZ",
-          "Ass": "True",
-          "Sps": "False",
-          "QtaFissa": "True",
-          "tEsteso": "sap-icon://document-text",
-          "Allegati": "sap-icon://search",
-          "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
-          "All": ""
-        },
-        {
-          "Pos": "0007",
-          "TipoPos": "L",
-          "Componente": "Q4A0000792",
-          "DefinizioneC": "PREPREG FR408HR 106 20X2''X0,058MM",
-          "Qta": "0,001",
-          "UdM": "CM2",
-          "Ass": "False",
-          "Sps": "True",
-          "QtaFissa": "False",
-          "tEsteso": "sap-icon://document-text",
-          "Allegati": "sap-icon://search",
-          "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
-          "All": ""
-        },
-        {
-          "Pos": "0010",
-          "TipoPos": "L",
-          "Componente": "Q4A0000798",
-          "DefinizioneC": "PREPREG FR408HR 1080 20X24''X0,081MM",
-          "Qta": "0,001",
-          "UdM": "CM2",
-          "Ass": "False",
-          "Sps": "False",
-          "QtaFissa": "False",
-          "tEsteso": "sap-icon://document-text",
-          "Allegati": "sap-icon://search",
-          "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
-          "All": ""
-        },
-        {
-          "Pos": "0020",
-          "TipoPos": "X",
-          "Componente": "RU501310AV",
-          "DefinizioneC": "SCHEDA GIUNZIONE AMMR-DT (SD)",
-          "Qta": "1",
-          "UdM": "PZ",
-          "Ass": "True",
-          "Sps": "False",
-          "QtaFissa": "True",
-          "tEsteso": "sap-icon://document-text",
-          "Allegati": "sap-icon://search",
-          "Testi": "ISOLA FR408HR 2X1086 152µM CORE DATA",
-          "All": ""
-        }
-      ]
-    }
-  ],
-  "allegati": [
-    {
-      "Ordine": "6500000160",
-      "doc": [
-        {
-          "name": "Purchase Order",
-          "src": "../../public/images/Screenshot_095254.jpg"
-        },
-        {
-          "name": "Quotation No. 32022618",
-          "src": "../../public/images/Screenshot_095456.jpg"
-        }
-      ]
     }
   ]
 }

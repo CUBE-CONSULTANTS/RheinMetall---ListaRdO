@@ -2,7 +2,8 @@ sap.ui.define(
   ["sap/ui/core/mvc/Controller", 
   "sap/ui/model/json/JSONModel",
   "sap/ui/core/Fragment",
-   "sap/ui/core/routing/History", "sap/ui/core/UIComponent"
+   "sap/ui/core/routing/History", 
+   "sap/ui/core/UIComponent"
   ],
   function (Controller, JSONModel,Fragment,History, UIComponent) {
     "use strict";
@@ -75,23 +76,12 @@ sap.ui.define(
           var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
           oRouter.navTo(rotta);
         },
-        formatData: function (model) {
-          var datinizi = new Date(model);
-          var datainizioformat =
-            datinizi.getDate() +
-            "/" +
-            [datinizi.getMonth() + 1] +
-            "/" +
-            datinizi.getFullYear();
-          return datainizioformat;
+        navTo: function (psTarget, pmParameters, pbReplace) {
+          this.getRouter().navTo(psTarget, pmParameters, pbReplace);
         },
-
-        formatOra: function (model) {
-          var ora_inizio = new Date(model);
-          var ora_inizioFormat =
-            ora_inizio.getHours() + ":" + ora_inizio.getMinutes();
-          return ora_inizioFormat;
-        },
+        getRouter: function () {
+          return UIComponent.getRouterFor(this);
+        }
       }
     );
   }

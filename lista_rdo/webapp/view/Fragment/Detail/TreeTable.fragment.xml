@@ -5,7 +5,7 @@ xmlns:m="sap.m"
 xmlns:table="sap.ui.table"
 >
 <table:TreeTable 
-rows="{path: 'detailModel>/' , parameters: {arrayNames: ['bom']}}"
+rows="{path: 'detailModel>/' , parameters: {arrayNames: ['posizioni']}}"
 selectionBehavior="RowSelector"
   class="table sapUiMediumMarginBottom" >
   <table:extension>
@@ -106,7 +106,7 @@ selectionBehavior="RowSelector"
   <table:Column  hAlign="Center" >
     <m:Label text="{i18n>Stato}" />
     <table:template>
-      <c:Icon color="{richiesteModel>color}" height="2.5rem" size="1.5rem" src="{richiesteModel>stato}" />   
+      <c:Icon color="{detailModel>colors}" height="2.5rem" size="1.5rem" src="{detailModel>status}" />   
     </table:template>
   </table:Column>   
 </table:columns>

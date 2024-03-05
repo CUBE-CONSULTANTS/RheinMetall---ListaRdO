@@ -15,11 +15,22 @@ sap.ui.define([
       debugger
       this.userType = this.getOwnerComponent().getModel("userModel").getProperty("/tipoUtente");
       debugger;
+      // let objJSon = await fetch("/model/modMock.json");
+      // let data = await objJSon.json();
+      // let datiRichiesta = data.dati[1].posizioni
+      // let oModel= new JSONModel(datiRichiesta)
+      // this.setModel(oModel,"detailModel");        
+      this.getRouter().getRoute("OrderDetail").attachPatternMatched(this._onRouteMatched, this);    
+    },
+    _onRouteMatched: async function (oEvent) {
+      debugger
+      const richiestaId = oEvent.getParameter("arguments").Action;
+      const status = oEvent.getParameter("arguments").Status
       let objJSon = await fetch("/model/modMock.json");
       let data = await objJSon.json();
-      let datiRichiesta = data.dati[1].posizioni
-      let oModel= new JSONModel(datiRichiesta)
-      this.setModel(oModel,"detailModel");          
+      let richiestaDetail = data.dati.find(element => element.richiesta === richiestaId)
+      let oModelDetail = new JSONModel(richiestaDetail);
+      this.setModel(oModelDetail, "detailModel");
     },
     onNav: function(oEvent){
       this.getRouter().navTo("RouteHome")
