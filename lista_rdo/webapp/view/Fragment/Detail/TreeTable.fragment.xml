@@ -16,6 +16,7 @@ selectionBehavior="RowSelector"
     icon="sap-icon://download"
     text="Scarica Documentazione"
     press="modDataConsegna"
+    visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
     type="Emphasized"
     /> 
     </m:OverflowToolbar>

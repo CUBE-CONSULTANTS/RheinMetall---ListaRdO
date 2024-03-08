@@ -9,7 +9,13 @@
             icon="sap-icon://undo"
             press="onNav"
         />
-
+        <m:ToolbarSpacer />
+        <m:Button
+        icon="sap-icon://cancel"
+        visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false}"
+        text="{i18n>Non Accettare}"
+        type="Emphasized"
+    />
         <m:ToolbarSpacer />
 
         <m:Button
